@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INCOME TAX DEPARTMENT</title>
+	<style>
+		body
+		{
+			background-color: white;
+		}
+		.heading{
+			font-family:sans-serif;
+			font-size: 50px;
+			background-color: yellow;
+			color:black;
+			padding: 7px;
+			margin: 15px;
+		}
+		img{
+			float:left;
+		}
+		.topnav {
+			overflow: hidden;
+			background-color: black;
+		}
+		.topnav a {
+			float:right;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			font-size: 17px;
+		}
+		.topnav a:hover {
+			background-color: blue;
+			color: black;
+		}
+		.topnav a.active {
+			background-color: black;
+			color: white;
+		}
+		body{
+			width: available;
+			height: available;
+		}
+		.container{
+			width: available;
+			height: available;
+		}
+		.leftpane{
+			width:25%;
+			min-height:630px; 
+			background: slateblue;
+			float: left;
+			border-collapse: collapse;
+		}
+		.middlepane{
+			width:45%;
+			min-height: 630px;
+			float: left;
+			background-color: tomato;
+			border-collapse: collapse;
+		}
+		.middlepane h2{
+			font-size: 25px;
+			font-family: sans-serif;
+			background-color: mango;
+			color: white;	
+		}
+		.middlepane li{
+			background-color: #EAFAFA; color: black; padding: 5px; margin: 10px
+		}
+		.righttoppane{
+			width:30%;
+			min-height: 290px;
+			float: right;
+			background-color: orange;
+			border-collapse: collapse;
+		}
+		.righttoppane a{
+			font-family:sans-serif; font-size: 15px; background-color: #EAFAFA; color:green; padding: 7px; margin: 15px;
+		}
+		.righttoppane h2{
+			font-size: 25px;
+			font-family: sans-serif;
+			background-color: lightblue;
+			color: white;
+		}
+		.rightbottompane{
+			width:30%;
+			min-height: 320px;
+			float: right;
+			background-color: green;
+			border-collapse: collapse;
+		}
+		.rightbottompane h2{
+			font-size: 25px;
+			font-family: sans-serif;
+			background-color: yellow;
+			color: white;
+		}
+		.rightbottompane a{
+			font-family:sans-serif;
+			font-size: 15px;
+			background-color: #EAFAFA;
+			color:green;
+			padding: 7px;
+			margin: 15px;
+		}
+		.bottompane{
+			width: 100%;
+			max-height: 300px;
+			background-color: lightblue;
+			float: left;
+			font-family: sans-serif;
+			color: black;
+		}
+		.bottompane a{
+			font-family:sans-serif;
+			font-size: 17px;
+			background-color: #EAFAFA;
+			color:green;
+			padding: 7px;
+			margin: 15px;
+		}
+		.welcome{
+			font-size: 25px;
+			font-family: sans-serif;
+		}
+		.tax_leftpane{
+			width:33.3%;
+			height: 400px;
+			max-height:400px; 
+			background-color: yellow;
+			float: left;
+			border-collapse: collapse;
+		}
+		.tax_middlepane{
+			width:33.4%;
+			height: 400px;
+			max-height: 400px;
+			float: left;
+			background-color: voilet;
+			border-collapse: collapse;
+		}
+		.tax_rightpane{
+			width:33.3%;
+			height: 400px;
+			max-height: 400px;
+			float: right;
+			background-color: orange;
+			border-collapse: collapse;
+		}
+		.tax_rightpane a{
+			font-family:sans-serif;
+			font-size: 17px;
+			background-color: #green;
+			color:green;
+			padding: 7px;
+			margin: 15px;
+		}
+		.tax_rightpane h2{
+			font-size: 25px;
+			font-family: sans-serif;
+			background-color: blue;
+			color: white;
+		}
+		.tax_leftpane a{
+			font-family:sans-serif;
+			font-size: 17px;
+			background-color: #EAFAFA;
+			color:green;
+			padding: 7px;
+			margin: 15px;
+		}
+		.tax_leftpane h2{
+			font-size: 25px;
+			font-family: sans-serif;
+			background-color: tomato;
+			color: white;
+		}
+		.tax_middlepane a{
+			font-family:sans-serif;
+			font-size: 17;
+			background-color: #EAFAFA;
+			color:green;
+			padding: 7px;
+			margin: 15px;
+		}
+		.tax_middlepane h2{
+			font-size: 25px;
+			font-family: sans-serif;
+			background-color: #33cc00 ;
+			color: white;
+		}	
+		.login-page{
+			width: 90%;
+			padding-top: 15%;
+			padding-bottom: 15%;
+			padding-left: 5%;
+			padding-right: 10%;
+			margin: auto;
+		}
+		.form{
+			position: relative;
+			z-index:1;
+			/background: rgba(7,40,195,0.8);/
+			background:lightyellow;
+			max-width: 90%;
+			margin:auto;
+			padding: 10%;
+			text-align: center;
+		}
+		.form input{
+			font-family:sans-serif;
+			outline:1;
+			background: #f2f2f2;
+			width: 80%;
+			border: 0;
+			margin: 0 0 15px;
+			padding: 15px;
+			box-sizing: border-box;
+			font-size: 14px;
+		}
+		.form button{
+			font-family: sans-serif;
+			text-transform: uppercase;
+			outline: 0;
+			background: green;
+
+			width: 100%
+			border:0;
+			padding: 15px;
+			color: #FFFF;
+			font-size: 14px;
+			cursor: pointer;
+		}
+		.form button: hover,.form button:active{
+			background-color: yellow;
+		}
+		.form .message{
+			margin: 14px 0 0;
+			font-size: 15px;
+		}
+		.form .resister-form{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<img src="C:\Users\Maggie\Downloads\tax image.PNG" width="150" height="100" border="1" />
+<h1 class="heading" style="text-align: center;"> INCOME TAX DEPARTMENT OF INDIA</h1>
+<br>
+<div class =" topnav">
+		<a href="#contact">CONTACT US</a>
+		<a href="#accesiblity">E-ACCESSIBITY</a>
+		<a href="#feedback">FEEDBACK</a>
+		<a href="#tax-payers">TAXPAYERS SERVICE</a>
+		<a href="#about">ABOUT US</a>
+		<a class="active" href="#home">HOME</a>
+</div>
+<div class="welcome">
+<marquee directin="left" width="100%" height="20%" scrollamount="8" scrolldelay="10%" bgcolor="#EAFAFA"  >Important News: Instant PAN allotment in near to real time is available at free of cost.Individuals(other than minors) with a valid Aadhar number(with updated Mobile number) can avail the PAN allotment facility.</marquee>
+</div>
+<h2 style="text-align: center;background-color: #33C2FF ; color: black; font-family: sans-serif;">NEWS</h2>
+<div>
+<marquee direction="up" width="100%" height="20%" scrollamount="3" scrolldelay="10%" bgcolor="#33C2FF">
+<ul style="list-style-type:square">
+	<li style="background-color: #EAFAFA; color: black; padding: 5px; margin: 10px">Order_119_ITA_filing_ITRsTARs_respect_UTs_Jammu_MiscComm_23_3_20.pdf</li>
+	<li style=" background-color: #EAFAFA; color: black; padding: 5px; margin: 10px">CBDT notifies ITR-1 and ITR-4 for Assessment year 2020-21</li>
+	<li style="background-color: #EAFAFA; color: black; padding: 5px; margin: 10px">Auction of South Mumbai flat on 5th November, 2019
+</li>
+	<li style="background-color: #EAFAFA; color: black; padding: 5px; margin: 10px">*Press release regarding : CBDT issues orders u/s 119 of IT Act, 1961 to mitigate hardships to tax-payers arising out of compliance of TDS/TCS provisions</li>
+	<li style="background-color: #EAFAFA; color: black; padding: 5px; margin: 10px">* UNION BUDGET 2020-21* ​CBDT notifies ITR-1 and ITR-4 for Assessment year 2020-21
+</li>
+<li style=" background-color: #EAFAFA; color: black; padding: 5px; margin: 10px">* Press Release regarding: CBDT issues FAQs on Direct Tax Vivad se Vishwas Scheme, 2020* Circular No. 7/2020: Clarifications on provisions of the Direct Tax Vivad se Vishwas Bill, 2020</li>
+<li style="background-color: #EAFAFA; color: black; padding: 5px; margin: 10px">* UNION BUDGET 2020-21
+</li>
+</ul>
+</marquee>
+</div>
+<div class="container">
+	<div class="leftpane">
+		<div class="login-page">
+			<div class="form">
+				<form class="resister-form">
+					<h2 style= "color: black;font-family: sans-serif; padding: 5px; margin: 10px">SIGN UP </h2>
+					<input type="text" placeholder="Username"/>
+					<input type="text" placeholder="Email"/>
+					<input type="text" placeholder="Password"/>
+					<p>Make sure it's at least 15 characters OR at least 8 characters including a number and a lowercase letter.</p>
+					<button>SIGN UP</button>
+					<p class="message" style="font-family: sans-serif;">ALREADY RESISTERED ?
+						<p style="font-family:sans-serif; background-color: #EAFAFA; color:green; padding: 7px; margin: 15px"><a href="a">LOGIN</a></p>
+					</p>
+				</form>
+
+				<form class="login-form">
+					<h2 style= "color: black; padding: 5px;font-family: sans-serif; margin: 10px">LOGIN </h2>
+					<input type="test" placeholder="User Name"/>
+					<input type="password" placeholder="Password"/>
+					<button>LOGIN</button><br>
+					<button>RESET PASSWORD</button>
+					<button>FORGOT PASSWORD</button>
+					<p class="message" style="font-family: sans-serif;"> NOT RESISTERED ?
+						<p style="font-family: sans-serif; background-color: green; color: gray; padding: 5px; margin: 10px"><a href="a">SIGN UP</a></p>
+					</p>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="middlepane">
+		<h2>What's New</h2>
+		<ul>
+	<li>Order u/s 119 of The Income Tax Act, 1961 on issue of certificates for lower rate/nil deduction/collection of TDS or TCS u/s 195, 197 and 206C(9)</li>
+	<li>​Finance Act, 2020</li>
+	<li>​Direct Tax Vivad se Vishwas Rules, 2020</li>
+	<li>​Preference forms of candidates selected as Inspector of Income Tax, CGLE 2017, reminder to candidates</li>
+	<li>​Amendment of rule 17C to include investment made by National Payments Corporation of India in its subsidiary companies</li>
+	<li>​Amendment of the Income-tax Rules 1962 for the purposes of section 115BAA and section 115BAB of the Income-tax Act, 1961</li>
+	<li>UNION BUDGET 2020-21</li>
+	<li>Notification 01/2020 CBDT notifies ITR-1 and ITR-4 for Assessment year 2020-21​</li>
+	<li>Notification No. 105/2019, prescribing electronic modes of payment u/s 269SU of the Income-tax Act, 1961​</li>
+</ul>
+	</div>
+	<div class="righttoppane">
+		<h2>Important Links</h2>
+		<ul>
+
+		<li><a href="#instant_pan">INSTANT E- PAN</a><br><br></li>
+		<li><a href="#link_Aadhar">LINK AADHAR</a><br><br></li>
+		<li><a href="#submit_forms">SUBMIT FORMS</a><br><br></li>
+		<li><a href="#itr_status">ITR STATUS</a><br><br></li>
+		</ul>	
+	</div>
+	<div class="rightbottompane">
+		<h2>FAQs:</h2>
+		<ol>
+			<li><a href="#que1">General FAQs</a></li><br>
+			<li><a href="#que2">FAQs for Senior Citizen's</a></li><br>
+			<li><a href="#que3">FAQs on filing the return of income​</a></li><br>
+			<li><a href="#que4">FAQs on Tax Deducted at Source (TDS)</a></li><br>
+			<li><a href="#que5">FAQs on Salary Income</a></li><br>
+			<li><a href="#que6">FAQs on Income from house property</a></li><br>
+		</ol>
+			<a href="#view_more">View More</a>
+	</div>
+<div>
+	<div class="tax">
+		<div class="tax_leftpane">
+			<h2>Tax Information And Services</h2>
+			<ul>
+				<li><a href="#tax_tool">Tax tools</a></li><br>
+				<li><a href="#TAX_TUTORIALS">Tax Tutorials</a></li><br>
+				<li><a href="#tax_CHART">Tax Chart & Tables</a></li><br>
+				<li><a href="#tax_OFFICE">Tax Office</a></li><br>
+			</ul>
+			<a href="#view_more">View More</a>
+		</div>
+		<div class="tax_middlepane">
+			<h2>Tax Laws And Rules</h2>
+			<ul>
+				<li><a href="#acts">Acts</a></li><br>
+				<li><a href="#rules">Rules</a></li><br>
+				<li><a href="#CIRCULARS">Circulars</a></li><br>
+				<li><a href="#Notification">Notification</a></li><br>
+				<li><a href="#BUDGETS">Budgets</a></li><br>
+				<li><a href="#BILLS AND DIRECT TAX CODE">Bills And Direct Tax Code</a></li><br>
+			</ul>
+			<a href="#view_more">View More</a>
+		</div>
+		<div class="tax_rightpane">
+			<h2>International Taxaction</h2>
+			<ul>
+				<li><a href="#TAX">Tax Treaties</a></li><br>
+				<li><a href="#withhplding_tax">Withholding Tax</a></li><br>
+				<li><a href="#EXCHANGEOFINFO">Exchange Of Information</a></li><br>
+			</ul>
+			<a href="#view_more">View More</a>
+		</div>
+	</div>
+	</div>	
+	<div class="bottompane">
+		<h2>Disclaimer</h2>
+		<ul>
+		<li><a href="#rti">RTI</a><br><br></li>
+		<li><a href="#report_phishing">Report Phishing</a><br><br></li>
+		<li><a href="#useful_links">Useful Links</a><br><br></li>
+		<li><a href="#e_governance">e_Governance</a><br><br></li>
+		<li><a href="#terms_&_condition">Terms & Condition</a><br><br></li>
+		<li><a href="#tds_cpc">TDS CPC</a><br><br></li>
+		</ul>
+	</div>
+</div>
+<div class="welcome">
+<marquee directin="left" width="100%" height="20%" scrollamount="8" scrolldelay="10%" bgcolor="#EAFAFA" >Thank you for visiting our website. For official, please visit:<a href="https://www.incometaxindia.gov.in/Pages/default.aspx">https://www.incometaxindia.gov.in/Pages/default.aspx</a></marquee>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script >
+	
+			// $('.message a').click(function(){
+			// $('form').animate({height: "toggle",opacity:"toggle"},"slow");
+			// });
+			$(document).ready(function(){
+			$(" a").click(function(e){
+				$("form").toggle();
+				e.preventDefault();
+			});
+			});
+		</script>
+		
+</body>
+</html>
